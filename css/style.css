@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+*{
+    margin:0;
+    padding: 0;
+}
+html,body{
+    font-family: 'Slabo 27px', serif;
+    color:rgba(2, 2, 2, 0.8);
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    background-image: url("../assets/images/background.png");
+    background-position: center;
+    background-size: auto 100vh;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.counter{
+    padding-bottom: 15px;
+}
+.form{
+    width: 310px
+}
+form{
+    border-radius: 0 0 15px 15px;
+    background-color: rgba(35,35,35,.8);
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+form input{
+    display: none;
+    margin-left: 15px;
+}
+form label{
+    color: wheat;
+    cursor: pointer;
+}
+.alternative{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    height: 35px;
+}
+.alternative:hover{
+    background-color: rgba(153, 148, 148, 0.8);
+}
+.alternative:last-child{
+    border-radius: 0 0 15px 15px;
+}
+
+
+#image{
+    display: block;
+    background-size: cover;
+    background-position-y: -40px;
+    border-radius: 15px 15px 0 0;
+    width: 310px;
+    height: 290px;
+}
+@media screen and (min-width: 480px){
+
+    #image{
+        width: 410px;
+        height: 390px;
+        object-fit: cover;
+    }
+    .form{
+        width: 410px;
+    }
+    .alternative{
+        width: 410px;
+        height: 50px;
+    }
+}
+@media screen and (min-width: 760px){
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+    .counter{
+        text-align: center;
+        width: 100vw;
+    }
+    #image{
+        border-radius: 15px 15px 0 0px;
+    }
+    .form{
+        margin-top: -5px;
+        height: 380px;
+        margin-bottom: 2px;
+    }
+    form{
+        border-radius: 0 0 15px 15px;
+        margin-top: 0;
+        font-size: 25px;
+        height: inherit;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .alternative{
+        flex:1;
+    }
+
+}
+@media screen and (min-width: 817px){
+    #image{
+        border-radius: 15px 0 0 15px;
+    }
+    form{
+        border-radius: 0 15px 15px 0;
+        margin-top: 1px;
+    }
+    .alternative:last-child{
+        border-radius: 0 0 15px 0;
+    }
+    .alternative:first-child{
+        border-radius: 0 15px 0 0;
+    }
+
+}
